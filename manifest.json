@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "My Attendance Helper",
+  "version": "1.0.0",
+  "description": "Tracks attendance logs from company-provided work portals.Helps employees visualize working hours in supported attendance pages",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://niruthi.keka.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://niruthi.keka.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
