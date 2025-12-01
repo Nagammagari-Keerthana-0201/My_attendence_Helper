@@ -1,5 +1,3 @@
-// Keka Hours Tracker - Background Service Worker
-// This runs in the background and handles extension lifecycle events
 
 console.log('[Keka Tracker] Background service worker initialized');
 
